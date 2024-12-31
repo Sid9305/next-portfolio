@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Navbar from "./lib/Navbar";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
@@ -85,7 +84,7 @@ export default function Home() {
               <a
                 href="#home"
                 onClick={handleAnchorClick} // Prevent default behavior and handle custom scroll
-                className="underline font-bold underline-offset-2"
+                className="underline  font-bold underline-offset-2"
               >
                 about me &rarr;
               </a>
