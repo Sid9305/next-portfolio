@@ -33,9 +33,9 @@ export default function Home() {
 
   return (
     <div>
-      <section className="sm:justify-center sm:items-center">
-        <div className="sm:h-max h-[10vh]"></div>
-        <div className="flex justify-center items-center my-0 z-1 relative">
+      <section>
+        {/* <div className=""></div> */}
+        <div className="flex justify-center items-center m-0 z-1 relative">
           <div className="relative text-center">
             {/* Pop-up Text */}
             {showText && (
@@ -50,14 +50,14 @@ export default function Home() {
               className="animate-pop-up sm:animate-rotate-fade"
               src="/iphone2.svg"
               alt="iPhone"
-              width={600}
+              width={500}
               height={158}
               priority
             />
           </div>
         </div>
-        <div className="sm:h-max h-[8vh]"></div>
-        <div className="flex h-[15vh] items-center sm:justify-between m-auto flex-wrap justify-center">
+        {/* <div className="sm:h-max h-[8vh]"></div> */}
+        <div className="flex  items-center sm:justify-between m-auto flex-wrap justify-center">
           {/* First Column */}
           <div className="hidden sm:inline flex-1 p-4">
             {/* Content for the first column */}
@@ -74,7 +74,7 @@ export default function Home() {
           {/* Second Divider */}
           <div className="hidden sm:inline w-[2px] bg-neutral-100 h-[8vh] sm:h-[15vh]"></div>
 
-          <div className="sm:hidden w-11/12 bg-neutral-100 h-px j"></div>
+          {/* <div className="sm:hidden w-11/12 bg-neutral-100 h-px j"></div> */}
 
           {/* Third Column with "Hello Click Me" Message */}
           <div className="flex-1 p-4 flex justify-center items-center sm:justify-start sm:justify-items-start">

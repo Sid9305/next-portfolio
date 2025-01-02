@@ -22,10 +22,10 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="bg-transparent sticky top-0 z-50">
-        <div className="flex justify-between items-center max-w-7xl mx-auto p-5 md:p-10">
+      <nav className="bg-transparent sticky z-50">
+        <div className="flex justify-between items-center max-w-7xl mx-auto pt-5 px-5 md:p-10 pb-0">
           {/* Logo */}
-          <div className="bg-black sm:p-5 p-3 sm:rounded-3xl  rounded-xl">
+          <div className="bg-black sm:p-5 p-3 sm:rounded-3xl rounded-xl">
             <Link href="/" className=" text-xs sm:text-xl font-bold text-white">
               Siddhi Mehta
             </Link>
