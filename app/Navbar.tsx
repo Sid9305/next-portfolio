@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
                   Skills
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/contact"
                   className={`${
@@ -81,9 +81,9 @@ const Navbar: React.FC = () => {
                       : "hover:border-b-2 hover:border-gray-400"
                   } block px-4 py-2 lg:p-0`}
                 >
-                  Contact
+                  Connect
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -135,7 +135,7 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
 
-          <li style={{ display: isSidebarVisible ? "inline" : "none" }}>
+          {/* <li style={{ display: isSidebarVisible ? "inline" : "none" }}>
             <Link
               href="/contact"
               className={`flex flex-col items-center text-xs ${
@@ -145,9 +145,9 @@ const Navbar: React.FC = () => {
               }`}
             >
               <FaPhoneAlt size={18} />
-              Contact
+              Connect
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>
