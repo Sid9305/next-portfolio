@@ -1,8 +1,6 @@
 "use client"; // Ensure it's a client component in Next.js
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Lottie from "lottie-react";
-import ripple from "../../ripple.json";
 const ProjectData = [
   {
     id: 1,
@@ -144,11 +142,7 @@ const Page = () => {
             />
             {isLoading && (
               <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-70 z-10">
-                <div className="relative flex items-center justify-center">
-                  <div className="flex items-center justify-center h-screen">
-                    <Lottie animationData={ripple} loop={true} />
-                  </div>
-                </div>
+                <div className="w-8 h-8 border-4 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
               </div>
             )}
             {/* Image Dot Indicator */}
