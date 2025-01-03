@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { SiWebmoney } from "react-icons/si";
 import { FaCloudflare } from "react-icons/fa6";

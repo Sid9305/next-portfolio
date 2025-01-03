@@ -1,5 +1,4 @@
 "use client"; // Ensure it's a client component in Next.js
-import Iphone15Pro from "@/components/ui/iphone-15-pro";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -8,7 +7,13 @@ const ProjectData = [
     id: 1,
     title: "Fitness X 🏋️‍♀️",
     tagline: "Headstart to Your Health Journey",
-    images: ["/iphone2.svg", "/iphone.png"],
+    images: [
+      "/proj1_1.png",
+      "/proj1_2.png",
+      "/proj1_3.png",
+      "/proj1_4.png",
+      "/proj1_5.png",
+    ],
     description:
       "A smart fitness app powered by Google Fit API that connects seamlessly with your Bluetooth devices like smartwatches and weighing machines. Create personalized workout, meal, and food plans tailored to your goals—whether it's a vitamin-rich diet or weight gain workouts.",
     link: "https://example.com",
@@ -18,7 +23,7 @@ const ProjectData = [
     id: 2,
     title: "Minimalistic Social Media App 💬",
     tagline: "Less Noise, More Connection.",
-    images: ["/iphone2.svg", "/iphone.png"],
+    images: ["/proj2_1.png", "/proj2_2.png", "/proj2_3.png", "/proj2_4.png"],
     description:
       "A distraction-free social media platform where simplicity reigns. Share your thoughts with quick tweets and focus on genuine connections without the clutter of endless reels and distractions. Built with Firebase for seamless performance.",
     link: "https://example.com",
@@ -28,28 +33,35 @@ const ProjectData = [
     id: 3,
     title: "Minimalistic Food Delivery App 🍔",
     tagline: "Food, Fast. No Fuss.",
-    images: ["/iphone2.svg", "/iphone.png"],
+    images: [
+      "/proj3_1.png",
+      "/proj3_2.png",
+      "/proj3_3.png",
+      "/proj3_4.png",
+      "/proj3_5.png",
+      "/proj3_6.png",
+    ],
     description:
       "Experience effortless food delivery with an app designed for simplicity. Easy sign-in, quick ordering, and a clean interface make your food cravings just a tap away.",
     link: "https://example.com",
     skills: ["Flutter", "Firebase", "Android Studio", "Xcode"],
   },
-  {
-    id: 4,
-    title: "Minimalist Habit Tracker 📊",
-    tagline: "Small Steps, Big Changes.",
-    images: ["/iphone2.svg", "/iphone.png"],
-    description:
-      "Track your daily habits with a clean and interactive heat map design. Stay motivated, visualize your progress, and build routines that stick—one habit at a time.",
-    link: "https://example.com",
-    skills: [
-      "Flutter",
-      "Firebase",
-      "Android Studio",
-      "Xcode",
-      "Charts_flutter ",
-    ],
-  },
+  // {
+  //   id: 4,
+  //   title: "Minimalist Habit Tracker 📊",
+  //   tagline: "Small Steps, Big Changes.",
+  //   images: ["/proj1_1.png", "/proj1_1.png"],
+  //   description:
+  //     "Track your daily habits with a clean and interactive heat map design. Stay motivated, visualize your progress, and build routines that stick—one habit at a time.",
+  //   link: "https://example.com",
+  //   skills: [
+  //     "Flutter",
+  //     "Firebase",
+  //     "Android Studio",
+  //     "Xcode",
+  //     "Charts_flutter ",
+  //   ],
+  // },
 ];
 
 const Page = () => {
@@ -97,7 +109,7 @@ const Page = () => {
 
       <div className=" sm:h-[2vh]"></div>
       <div className="flex justify-center h-full items-center">
-        <div className=" flex flex-col xl:flex-row ">
+        <div className="max-sm:items-center md:max-lg:items-center flex flex-col xl:flex-row ">
           {/* Left Section - Text */}
           <div className="mx-10 sm:mx-0 basis-1/3">
             <h3 className="text-l sm:text-xl font-bold mt-3">
@@ -113,15 +125,15 @@ const Page = () => {
 
           {/* Middle Section - Image Slideshow */}
           <div
-            className="min-[425px]:ml-10 min-[375px]:ml-4 basis-1/3 relative flex flex-col items-center justify-center animate-pop-up"
+            className="min-[425px]:ml-10  min-[375px]:ml-4 basis-1/3 relative flex flex-col items-center justify-center animate-pop-up"
             style={{ width: "max-content" }}
           >
             <Image
-              className=" animate-pop-up mb-4 sm:w-full"
+              className=" animate-pop-up mb-4 sm:w-11/12 md:w-9/12 max-sm:w-6/12 "
               src={currentProject.images[currentImageIndex]}
               alt={`Slide ${currentImageIndex + 1}`}
-              width={screenSize === "mobile" ? 350 : 700}
-              height={screenSize === "mobile" ? 300 : 250}
+              width={screenSize === "mobile" ? 350 : 500}
+              height={screenSize === "mobile" ? 300 : 150}
               priority
             />
 

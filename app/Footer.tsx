@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineNightlight } from "react-icons/md";
-import { useTheme } from "next-themes";
 const Footer = () => {
   const [screenSize, setScreenSize] = useState<"mobile" | "desktop">("desktop");
 
