@@ -1,7 +1,8 @@
 "use client"; // Ensure it's a client component in Next.js
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-
+import Lottie from "lottie-react";
+import ripple from "../../ripple.json";
 const ProjectData = [
   {
     id: 1,
@@ -76,8 +77,12 @@ const Page = () => {
     setCurrentImageIndex(0); // Reset image index when changing projects
   };
 
-  // Handle Image Navigation
+  // Add a loading state
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Handle Image Navigation with loading state
   const handleImageChange = (index: number) => {
+    setIsLoading(true); // Start buffering
     setCurrentImageIndex(index);
   };
 
@@ -129,14 +134,23 @@ const Page = () => {
             style={{ width: "max-content" }}
           >
             <Image
-              className=" animate-pop-up mb-4 sm:w-11/12 md:w-9/12 max-sm:w-6/12 "
+              className="animate-pop-up mb-4 sm:w-11/12 md:w-9/12 max-sm:w-6/12"
               src={currentProject.images[currentImageIndex]}
               alt={`Slide ${currentImageIndex + 1}`}
               width={screenSize === "mobile" ? 350 : 500}
               height={screenSize === "mobile" ? 300 : 150}
               priority
+              onLoadingComplete={() => setIsLoading(false)} // Stop buffering
             />
-
+            {isLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-70 z-10">
+                <div className="relative flex items-center justify-center">
+                  <div className="flex items-center justify-center h-screen">
+                    <Lottie animationData={ripple} loop={true} />
+                  </div>
+                </div>
+              </div>
+            )}
             {/* Image Dot Indicator */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
               {currentProject.images.map((_, index) => (
