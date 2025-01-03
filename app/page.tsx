@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
@@ -81,13 +82,20 @@ export default function Home() {
             <p className="text-xs sm:text-xl text-gray-700 cursor-pointer">
               I invent, I simply
               <br />
-              <a
-                href="#home"
-                onClick={handleAnchorClick} // Prevent default behavior and handle custom scroll
+              <Link
+                href="/about"
+                // onClick={handleAnchorClick}
                 className="underline  font-bold underline-offset-2"
               >
                 about me &rarr;
-              </a>
+              </Link>
+              {/* <a
+                href="/about"
+                onClick={handleAnchorClick} // Prevent default behavior and handle custom scroll
+                className="underline  font-bold underline-offset-2"
+              >
+                
+              </a> */}
             </p>
           </div>
         </div>

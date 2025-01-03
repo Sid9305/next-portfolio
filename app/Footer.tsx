@@ -16,7 +16,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="mt-2 max-sm:h-[40vh] sm:h-[25vh] bg-neutral-100 flex items-center py-4">
+    <div className="mt-2 max-sm:h-[30vh] sm:h-[25vh] bg-neutral-100 flex items-center max-sm:py-2 py-4">
       <div className="basis-1/2 flex items-center justify-center">
         <div className=" text-left flex flex-col gap-1">
           <h2 className="sm:text-xl text-sm font-bold">Connect With Me</h2>
