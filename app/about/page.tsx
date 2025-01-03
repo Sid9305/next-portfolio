@@ -82,7 +82,9 @@ const Page = () => {
         </div>
         <div className="basis-1/2 flex flex-col justify-center text-start">
           <h1 className="text-xl sm:text-2xl font-bold">Hi</h1>
-          <h2 className="text-xl sm:text-2xl font-bold">I'm Siddhi Mehta</h2>
+          <h2 className="text-xl sm:text-2xl font-bold">
+            I&apos;m Siddhi Mehta
+          </h2>
           <p>Pursing B.E. in Thadomal Shahani Engineering College</p>
           <p className="text-neutral-400">
             I am a versatile developer with expertise in both web and app
