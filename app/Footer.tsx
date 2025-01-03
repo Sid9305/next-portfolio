@@ -16,9 +16,9 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="mt-2 max-sm:h-[30vh] sm:h-[25vh] bg-neutral-100 flex items-center max-sm:py-2 py-4">
+    <div className="mt-2 max-sm:h-max sm:h-[25vh] bg-neutral-100 flex flex-col sm:flex-row items-center gap-4 max-sm:py-2 py-4">
       <div className="basis-1/2 flex items-center justify-center">
-        <div className=" text-left flex flex-col gap-1">
+        <div className="text-center sm:text-left flex flex-col gap-1">
           <h2 className="sm:text-xl text-sm font-bold">Connect With Me</h2>
           <a
             href="https://in.linkedin.com/in/siddhi-mehta-228048298"
@@ -34,9 +34,11 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="basis-1/2 flex items-center justify-center">
-        <div className=" text-left flex flex-col">
-          <div className="flex  w-max flex-row gap-2 sm:m-2">
+
+      <div className="sm:hidden inline h-[2px] bg-neutral-400 w-[40vw]"></div>
+      <div className="basis-1/2 flex items-center justify-center ">
+        <div className="text-center sm:text-left flex flex-col gap-1">
+          <div className="flex sm:w-max justify-center w-full flex-row gap-2 sm:m-2">
             <button className="rounded-full border text-center border-gray-300 px-3 py-1">
               <MdOutlineLightMode size={screenSize === "mobile" ? 18 : 24} />
             </button>
@@ -50,7 +52,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <p className="sm:text-l text-sm">
+          <p className="sm:text-l sm:text-left text-center text-sm">
             @2025 Siddhi Mehta. All rights reserved
           </p>
           <p className="sm:text-l text-xs text-gray-500">
